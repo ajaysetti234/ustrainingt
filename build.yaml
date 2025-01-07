@@ -1,0 +1,13 @@
+jobs:
+- job: Build
+  #pool:
+  #  vmImage: ubuntu-latest      
+  steps:
+  - checkout: self
+  - checkout: ajtraining
+  - task: PowerShell@2
+    inputs:
+      targetType: 'inline'
+      script: |
+        # Write your PowerShell commands here.            
+        Write-Host "Hello World ajtraining "
